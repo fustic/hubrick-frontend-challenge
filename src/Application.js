@@ -11,7 +11,7 @@ import ErrorPage from './pages/errorPage';
 import LoadingPage from './pages/loadingPage';
 
 if (process.env.BROWSER) {
-  require('./style/Application.scss');
+  require('./style/application.scss');
 }
 
 class Application extends Component {

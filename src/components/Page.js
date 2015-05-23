@@ -4,7 +4,7 @@ import NavBar from '../components/navBar';
 import Footer from '../components/footer';
 
 if (process.env.BROWSER) {
-  require('../style/Page.scss');
+  require('../style/page.scss');
 }
 
 class Page extends Component {

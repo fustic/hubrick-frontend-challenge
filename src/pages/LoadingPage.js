@@ -1,8 +1,8 @@
 import React from 'react';
 
 if (process.env.BROWSER) {
-  require('../style/Loader.scss');
-  require('../style/Animate.scss');
+  require('../style/loader.scss');
+  require('../style/animate.scss');
 }
 
 class LoadingPage extends React.Component {

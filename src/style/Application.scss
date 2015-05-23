@@ -1,7 +1,8 @@
 @import 'constants/colors';
 @import 'constants/typography';
 @import 'utils/normalize';
-
+@import 'grid';
+@import '../../node_modules/material-ui-sass/material-ui';
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

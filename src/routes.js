@@ -1,7 +1,7 @@
 
-import InitActions from './pages/InitActions';
+//import InitActions from './pages/initActions';
 
-import HomePage from './pages/HomePage';
+import HomePage from './pages/homePage';
 
 export default {
 

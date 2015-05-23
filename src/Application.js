@@ -3,12 +3,12 @@ import React, { PropTypes, Component } from 'react';
 import { provideContext, connectToStores } from 'fluxible/addons';
 import { handleHistory } from 'fluxible-router';
 
-import Page from './components/Page';
+import Page from './components/page';
 import Immutable from 'immutable';
 
-import NotFoundPage from './pages/NotFoundPage';
-import ErrorPage from './pages/ErrorPage';
-import LoadingPage from './pages/LoadingPage';
+import NotFoundPage from './pages/notFoundPage';
+import ErrorPage from './pages/errorPage';
+import LoadingPage from './pages/loadingPage';
 
 if (process.env.BROWSER) {
   require('./style/Application.scss');
@@ -38,9 +38,6 @@ class Application extends Component {
       document.title = documentTitle;
     }
 
-    if (!Immutable.is(prevProps.currentRoute, currentRoute)) {
-      trackPageView();
-    }
   }
 
   render() {

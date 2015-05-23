@@ -4,8 +4,6 @@ import compression from 'compression';
 import bodyParser from 'body-parser';
 import favicon from 'serve-favicon';
 import morgan from 'morgan';
-import app from './app';
-import config from './config';
 import render from './server/render';
 
 // Initialize express server

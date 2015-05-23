@@ -1,4 +1,4 @@
-import Actions from '../constants/Actions';
+import Actions from '../constants/actions';
 
 // Tip: in your fetchr service calls, make sure you set a timeout higher than
 // the default of 3000ms. See https://github.com/yahoo/fetchr/issues/58

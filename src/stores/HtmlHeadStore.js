@@ -1,5 +1,5 @@
 import { BaseStore } from 'fluxible/addons';
-import Actions from '../constants/Actions';
+import Actions from '../constants/actions';
 
 const SITE_NAME = 'Hubrick Frontend Challenge';
 const BASE_URL = 'https://hubrick-frontend-challenge.herokuapp.com';
@@ -12,13 +12,13 @@ and Application.js (to change the document's title)
 
 class HtmlHeadStore extends BaseStore {
 
-  static storeName = 'HtmlHeadStore'
+  static storeName = 'HtmlHeadStore';
 
   static handlers = {
     [Actions.NAVIGATE_START]: 'handleNavigateStart',
     [Actions.NAVIGATE_SUCCESS]: 'handleNavigateSuccess',
     [Actions.NAVIGATE_FAILURE]: 'handleNavigateFailure'
-  }
+  };
 
   constructor(dispatcher) {
     super(dispatcher);

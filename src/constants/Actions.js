@@ -1,4 +1,4 @@
-import keyMirror from "react/lib/keyMirror";
+import keyMirror from 'react/lib/keyMirror';
 
 const Actions = keyMirror({
 

@@ -5,7 +5,7 @@ import React from 'react';
 import serialize from 'serialize-javascript';
 
 import app from '../app';
-import HtmlDocument from './HtmlDocument';
+import HtmlDocument from './htmlDocument';
 
 import { navigateAction } from 'fluxible-router';
 

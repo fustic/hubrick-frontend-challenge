@@ -1,6 +1,6 @@
 
 import React from 'react/addons';
-import HtmlDocument from '../src/server/HtmlDocument';
+import HtmlDocument from '../src/server/htmlDocument';
 import jsdom from 'mocha-jsdom';
 import { expect } from 'chai';
 

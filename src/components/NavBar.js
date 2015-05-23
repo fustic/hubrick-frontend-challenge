@@ -1,7 +1,7 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'fluxible-router';
 if (process.env.BROWSER) {
-  require('../style/NavBar.scss');
+  require('../style/header.scss');
 }
 
 class NavBar extends Component {
@@ -9,10 +9,10 @@ class NavBar extends Component {
   render() {
     return (
       <div className="NavBar">
-        <div className="NavBar-title">
-          <NavLink href="/"></NavLink>
-        </div>
-        <div className="NavBar-links">
+        <div className="NavBar-links Grid Grid--center">
+          <NavLink href="/" className="NavBar-link">
+            <img src="https://hubrick.com/images/logo.png" alt=""/>
+          </NavLink>
           <NavLink
             className="NavBar-link"
             routeName="flows"

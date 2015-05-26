@@ -3,15 +3,15 @@ import React, { PropTypes, Component } from 'react';
 import { provideContext, connectToStores } from 'fluxible/addons';
 import { handleHistory } from 'fluxible-router';
 
-import Page from './components/page';
+import Page from '../src/components/page';
 import Immutable from 'immutable';
 
-import NotFoundPage from './pages/notFoundPage';
-import ErrorPage from './pages/errorPage';
-import LoadingPage from './pages/loadingPage';
+import NotFoundPage from '../src/pages/notFoundPage';
+import ErrorPage from '../src/pages/errorPage';
+import LoadingPage from '../src/pages/loadingPage';
 
 if (process.env.BROWSER) {
-  require('./style/application.scss');
+  require('../src/style/application.scss');
 }
 
 class Application extends Component {

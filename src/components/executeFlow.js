@@ -8,7 +8,11 @@ if (process.env.BROWSER) {
 }
 
 class ExecuteFlow extends Component {
-
+  static propTypes = {
+    flow: PropTypes.object.isRequired,
+    autoExecute: PropTypes.bool,
+    extraclass: PropTypes.string
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -23,6 +27,11 @@ class ExecuteFlow extends Component {
   static contextTypes = {
     executeAction: PropTypes.func.isRequired
   };
+  componentDidMount() {
+    if (this.props.autoExecute) {
+      this.handleExecute();
+    }
+  }
   handleExecute() {
     this.setState({
       results: this.props.flow.executeObject(this.state.objectToPass)
@@ -42,8 +51,11 @@ class ExecuteFlow extends Component {
     }
   }
   render() {
+    let { extraclass } = this.props;
+    extraclass = extraclass || '';
+    extraclass += ' Execute';
     return (
-      <div className="Execute">
+      <div className={extraclass}>
 
         <div className="Grid-cell">
           <TextField

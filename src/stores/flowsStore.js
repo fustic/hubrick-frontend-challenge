@@ -38,7 +38,7 @@ class FlowsStore extends BaseStore {
   }
   getFlow(id) {
     if (id) {
-      return this.flows.filter((flow) => flow.id === id);
+      return this.flows.filter((flow) => flow.id === Number(id))[0];
     }
     return null;
   }

@@ -1,21 +1,15 @@
 // Actions to run when the router matches a route. Used in app/routes.js
 
 import { loadFeaturedPhotos, loadPhoto } from '../actions/photoActionCreators';
-import { addFlow } from '../actions/flowsActionCreators.js';
+import { addFlow, getFlow } from '../actions/flowsActionCreators.js';
 
 const InitActions = {
 
-  featuredPage(context, route, done) {
-    const feature = route.getIn(['params', 'feature']);
-    context.executeAction(loadFeaturedPhotos, { feature }, done);
-  },
-
-  photoPage(context, route, done) {
+  flowPage(context, route, done) {
     const id = route.getIn(['params', 'id']);
-    context.executeAction(loadPhoto, { id }, done);
+    context.executeAction(getFlow, { id }, done);
   },
   newFlow(context, route, done) {
-    debugger;
     context.executeAction(addFlow, done);
   },
   // do not load something, just send an error in the callback

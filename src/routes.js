@@ -20,8 +20,8 @@ export default {
   flow: {
     path: "/flows/:id",
     method: "get",
-    handler: FlowPage//,
-    //action: InitActions.photoPage
+    handler: FlowPage,
+    action: InitActions.flowPage
   },
 
   // This route doesn't point to any handler.

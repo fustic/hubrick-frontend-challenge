@@ -11,6 +11,14 @@ const FlowsActionCreators = {
       url: '/flows/' + flow.id
     });
     done();
+  },
+
+  getFlow(context, payload, done) {
+    let flow = context.getStore(FlowsStore).getFlow(payload.id);
+    if (flow) {
+      return done();
+    }
+    return done(new Error('No such flow exists'));
   }
 
 };

@@ -1,6 +1,6 @@
 {
   "name": "hubrickFrontendChallenge",
-  "version": "0.1.1",
+  "version": "0.4.2",
   "description": "Hubrick Frontend Challenge",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "dev": "NODE_ENV=development DEBUG=hubrickFrontendChallenge node index",
     "prod": "NODE_ENV=production PORT=8080 DEBUG=hubrickFrontendChallenge node index",
     "build": "webpack --stats --progress --config ./webpack/prod.config.js",
-    "postinstall": "npm run build",
+    "postinstall": "npm run build && npm run prod",
     "linter": "eslint src && jscs src",
     "test": "mocha --compilers js:babel/register --recursive --reporter spec",
     "coverage": "babel-node node_modules/.bin/isparta cover --report text node_modules/.bin/_mocha --reporter spec"
@@ -52,7 +52,6 @@
     "fluxible-router": "^0.1.4",
     "immutable": "^3.7.3",
     "lodash": "^3.9.1",
-    "material-design-icons": "^1.0.1",
     "material-ui": "^0.7.5",
     "morgan": "^1.5.3",
     "node-libs-browser": "^0.5.0",

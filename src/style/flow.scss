@@ -4,3 +4,19 @@
 .Flow {
   width: 100%;
 }
+.Execute-button {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+.Execute {
+  .mui-is-multiLine {
+    width: 100%;
+  }
+  textarea {
+    min-height: 150px;
+  }
+}
+.Execution-list {
+  padding: 5px 0;
+}

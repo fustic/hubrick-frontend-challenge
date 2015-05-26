@@ -23,7 +23,8 @@ class FlowsStore extends BaseStore {
      * @property
      * @type {Array} flows
      */
-    this.flows = [new Flow(1, 'Flow 1')];
+    this.flows = [];
+    this.addTestFlow();
   }
 
   addEmptyFlow() {
@@ -90,6 +91,60 @@ class FlowsStore extends BaseStore {
 
   rehydrate(state) {
     this.flows = state.flows;
+  }
+  addTestFlow() {
+    let flow = new Flow(1, 'Flow 1');
+
+    flow.addNewRule();
+    flow.addNewRule();
+    flow.addNewRule();
+    flow.addNewRule();
+
+    let ruleBodyChangePayload = {
+      type: 'body',
+      ruleId: 1,
+      value: function (obj) {return obj.color === 'red' && obj.size === 12;}
+    };
+    flow.updateRuleAttrsFlow(ruleBodyChangePayload);
+    flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
+      ruleId: 2,
+      value: function (obj) {return obj.color === 'blue'}
+    }));
+    flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
+      ruleId: 3,
+      value: function (obj) {return obj.color !== 'blue' && obj.size === 12;}
+    }));
+    flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
+      ruleId: 4,
+      value: function (obj) {return obj.size === 12;}
+    }));
+    flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
+      ruleId: 5,
+      value: function (obj) {return obj.size;}
+    }));
+
+    flow.updateRuleNextFlow({
+      type: 'trueRule',
+      ruleId: 1,
+      newValue: 2
+    });
+    flow.updateRuleNextFlow({
+      type: 'falseRule',
+      ruleId: 2,
+      newValue: 3
+    });
+    flow.updateRuleNextFlow({
+      type: 'trueRule',
+      ruleId: 3,
+      newValue: 4
+    });
+    flow.updateRuleNextFlow({
+      type: 'trueRule',
+      ruleId: 4,
+      newValue: 5
+    });
+
+    this.flows.push(flow);
   }
 }
 

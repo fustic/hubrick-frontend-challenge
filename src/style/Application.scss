@@ -38,12 +38,20 @@ h1 {
   display: flex;
   align-items: center;
 }
-.success {
+.success, .passed {
   color: #4F8A10;
 }
-.fail {
+.fail, .error, .failed {
   color: #D8000C;
 }
 .margin-top-10 {
   margin-top: 10px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.paper-padding {
+  > .mui-paper-container {
+    padding: 15px 5px;
+  }
 }

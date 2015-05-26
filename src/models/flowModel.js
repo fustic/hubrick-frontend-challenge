@@ -33,8 +33,12 @@ class Flow extends BaseModel {
   updateRuleNextFlow(payload) {
     let rule = this.rules.filter((rule) => rule.id === payload.ruleId)[0];
     if (rule) {
-      rule[payload.type] = this.rules.filter((rule) => rule.id === payload.newValue)[0] || {};
-      rule[payload.type].isOccupied = true;
+      if (payload.newValue) {
+        rule[payload.type] = this.rules.filter((rule) => rule.id === payload.newValue)[0] || {};
+        rule[payload.type].isOccupied = true;
+      } else {
+        rule[payload.type] = null;
+      }
     }
     if (payload.prevValue) {
       payload.prevValue.isOccupied = false;
@@ -50,6 +54,26 @@ class Flow extends BaseModel {
     return this.rules
       .filter((rule) => !rule.isFlowStart && !rule.isOccupied && (id && rule.id !== id))
       .map((rule) => ({value: rule.id, label: rule.title}));
+  }
+  executeObject(obj) {
+
+    let rule = this.rules[0];
+    let results = [{
+      title: rule.title,
+      status: rule.body(obj) ? 'passed' : 'failed'
+    }];
+    let nextRule = rule.body(obj) ? rule.trueRule : rule.falseRule;
+    while (nextRule) {
+      results.push({
+        title: nextRule.title,
+        status: nextRule.body(obj) ? 'passed' : 'failed'
+      });
+      nextRule = nextRule.body(obj) ? nextRule.trueRule : nextRule.falseRule
+    }
+    results.push({
+      title: 'End'
+    });
+    return results;
   }
 }
 

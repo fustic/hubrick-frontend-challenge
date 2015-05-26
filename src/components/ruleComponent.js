@@ -37,14 +37,11 @@ class Rule extends Component {
   }
   handleRuleChange(type, index, rule) {
     rule = rule[0];
-    if (!rule) {
-      return;
-    }
     this.context.executeAction(flowRuleNextChange, {
       id: this.props.rule.flow.id,
       type: type,
       ruleId: this.props.rule.id,
-      newValue: rule.value,
+      newValue: rule && rule.value,
       prevValue: this.props.rule[type]
     });
   }
@@ -141,7 +138,9 @@ class Rule extends Component {
                     value={trueValue}
                     onChange={this.handleRuleChange.bind(this, 'trueRule')}
                     placeholder="if rule passed"
-                    disabled={flowCycleOptions.length === 0}/>
+                    clearable="true"
+                    clearValueText="clear"
+                    disabled={!trueValue && flowCycleOptions.length === 0}/>
           </div>
         </div>
 
@@ -154,7 +153,9 @@ class Rule extends Component {
                     value={falseValue}
                     onChange={this.handleRuleChange.bind(this, 'falseRule')}
                     placeholder="if rule failed"
-                    disabled={flowCycleOptions.length === 0}/>
+                    clearable="true"
+                    clearValueText="clear"
+                    disabled={!falseValue && flowCycleOptions.length === 0}/>
           </div>
         </div>
 

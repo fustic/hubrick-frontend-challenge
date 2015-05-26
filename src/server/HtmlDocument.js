@@ -9,16 +9,16 @@ class HtmlDocument extends React.Component {
     markup: PropTypes.string.isRequired,
     script: PropTypes.arrayOf(PropTypes.string),
     css: PropTypes.arrayOf(PropTypes.string)
-  };
+  }
 
   static defaultProps = {
     script: [],
     css: []
-  };
+  }
 
   static contextTypes = {
     getStore: PropTypes.func.isRequired
-  };
+  }
 
   render() {
     const { state, markup, script, css } = this.props;

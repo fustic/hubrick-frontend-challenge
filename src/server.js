@@ -4,7 +4,7 @@ import compression from 'compression';
 import bodyParser from 'body-parser';
 import favicon from 'serve-favicon';
 import morgan from 'morgan';
-import render from '../src/server/render';
+import render from './server/render';
 
 // Initialize express server
 
@@ -15,7 +15,7 @@ const server = express();
 server.use(morgan(server.get('env') === 'production' ? 'combined' : 'dev'));
 server.use(bodyParser.json());
 server.use(compression());
-server.use(favicon(path.resolve(__dirname, './src/assets/favicon.ico')));
+server.use(favicon(path.resolve(__dirname, './assets/favicon.ico')));
 
 // On production, use the public directory for static files
 // This directory is created by webpack on build time.

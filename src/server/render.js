@@ -5,24 +5,24 @@ import React from 'react';
 import serialize from 'serialize-javascript';
 
 import app from '../app';
-import HtmlDocument from '../server/htmlDocument';
+import HtmlDocument from './htmlDocument';
 
 import { navigateAction } from 'fluxible-router';
 
 let webpackStats;
 
 if (process.env.NODE_ENV === 'production') {
-  webpackStats = require('../server/webpack-stats.json');
+  webpackStats = require('./webpack-stats.json');
 }
 
 function renderApp(req, res, context, next) {
 
   if (process.env.NODE_ENV === 'development') {
-    webpackStats = require('../server/webpack-stats.json');
+    webpackStats = require('./webpack-stats.json');
 
     // Do not cache webpack stats: the script file would change since
     // hot module replacement is enabled in the development env
-    delete require.cache[require.resolve('../server/webpack-stats.json')];
+    delete require.cache[require.resolve('./webpack-stats.json')];
   }
 
   // dehydrate the app and expose its state

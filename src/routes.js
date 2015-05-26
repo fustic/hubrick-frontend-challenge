@@ -1,9 +1,9 @@
 
-import InitActions from '../src/pages/initActions';
+import InitActions from './pages/initActions';
 
-import HomePage from '../src/pages/homePage';
-import FlowsPage from '../src/pages/flowsPage';
-import FlowPage from '../src/pages/flowPage';
+import HomePage from './pages/homePage';
+import FlowsPage from './pages/flowsPage';
+import FlowPage from './pages/flowPage';
 
 export default {
 

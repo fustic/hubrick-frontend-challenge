@@ -13,7 +13,7 @@ const mountNode = document.getElementById('root');
 const dehydratedState = window.App;
 function renderApp() {
 
-  const app = require('../src/app');
+  const app = require('./app');
 
   debug('Rehydrating state...', dehydratedState);
 

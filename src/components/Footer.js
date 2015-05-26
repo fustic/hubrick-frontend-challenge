@@ -12,7 +12,7 @@ class Footer extends Component {
       <div className="Footer">
         <div>
           <strong>Hubrick Frontend Challenge</strong> is app built in <a href="https://facebook.github.io/react/">React</a> with <a href="http://www.fluxible.io">Fluxible</a>. See the <a href="https://github.com/fustic/hubrick-frontend-challenge">project’s page</a> on Github or try something
-          exciting: <NavLink className="Footer-link" routeName="bad" href="/bad">a bad route</NavLink> or <NavLink className="Footer-link" routeName="flow" navParams={{id: 100000000000}} href="/flows/">an unexisting flow</NavLink>.
+          exciting: <NavLink className="Footer-link" routeName="bad">a bad route</NavLink> or <NavLink className="Footer-link" routeName="flow" navParams={{id: 100000000000}}>an unexisting flow</NavLink>.
         </div>
       </div>
     );

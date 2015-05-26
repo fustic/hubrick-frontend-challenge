@@ -29,7 +29,7 @@ class Application extends Component {
     // prop coming from HtmlHeadStore
     documentTitle: PropTypes.string
 
-  }
+  };
 
   componentDidUpdate(prevProps) {
     const { documentTitle, currentRoute } = this.props;

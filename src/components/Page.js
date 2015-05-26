@@ -11,11 +11,11 @@ class Page extends Component {
 
   static propTypes = {
     footer: PropTypes.bool
-  }
+  };
 
   static defaultProps = {
     footer: true
-  }
+  };
 
   render() {
     const { footer } = this.props;

@@ -19,6 +19,34 @@ const FlowsActionCreators = {
       return done();
     }
     return done(new Error('No such flow exists'));
+  },
+
+  addNewRule(context, payload, done) {
+    if (context.getStore(FlowsStore).addFlowNewRule(payload.id)) {
+      return done();
+    }
+    return done(new Error('No such flow exists'));
+  },
+
+  flowChangeTitle(context, payload, done) {
+    if (context.getStore(FlowsStore).updateFlowTitle(payload.id, payload.title)) {
+      return done();
+    }
+    return done(new Error('No such flow exists'));
+  },
+
+  flowRuleNextChange(context, payload, done) {
+    if (context.getStore(FlowsStore).updateRuleNextFlow(payload)) {
+      return done();
+    }
+    return done(new Error('No such flow exists'));
+  },
+
+  flowRuleAttrsChange(context, payload, done) {
+    if (context.getStore(FlowsStore).updateRuleAttrsFlow(payload)) {
+      return done();
+    }
+    return done(new Error('No such flow exists'));
   }
 
 };

@@ -4,7 +4,7 @@ const Actions = keyMirror({
 
   ADD_FLOW: null,
   ADD_EMPTY_FLOW: null,
-
+  ADD_FLOW_RULE: null,
   // fluxible-router actions
   NAVIGATE_START: null,
   NAVIGATE_SUCCESS: null,

@@ -3,6 +3,7 @@ import Actions from '../constants/actions';
 import { connectToStores } from 'fluxible/addons';
 import { NavLink } from 'fluxible-router';
 import FlowAddButton from '../components/flowAddButton';
+import { addFlow } from '../actions/flowsActionCreators.js'
 
 if (process.env.BROWSER) {
   require('../style/flows.scss');

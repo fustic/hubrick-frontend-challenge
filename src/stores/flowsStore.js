@@ -1,6 +1,6 @@
 import { BaseStore } from 'fluxible/addons';
 import Actions from '../constants/actions';
-
+import Flow from '../models/flowModel'
 
 /**
  * @class
@@ -23,15 +23,12 @@ class FlowsStore extends BaseStore {
      * @property
      * @type {Array} flows
      */
-    this.flows = [{id: 1, title: 'Flow 1'}];
+    this.flows = [new Flow(1, 'Flow 1')];
   }
 
   addEmptyFlow() {
     const lastFlow = this.flows[this.flows.length - 1];
-    const flow = {
-      id: lastFlow.id + 1,
-      title: 'Flow ' + (lastFlow.id + 1)
-    };
+    const flow = new Flow(lastFlow.id + 1, 'Flow ' + (lastFlow.id + 1));
     this.flows.push(flow);
     this.emitChange();
     return flow;
@@ -41,6 +38,44 @@ class FlowsStore extends BaseStore {
       return this.flows.filter((flow) => flow.id === Number(id))[0];
     }
     return null;
+  }
+
+  addFlowNewRule(id) {
+    let flow = this.getFlow(id);
+    if (flow) {
+      flow.addNewRule();
+      this.emitChange();
+      return true;
+    }
+    return false;
+  }
+
+  updateFlowTitle(id, title) {
+    let flow = this.getFlow(id);
+    if (flow) {
+      flow.title = title;
+      this.emitChange();
+      return true;
+    }
+    return false;
+  }
+  updateRuleNextFlow(payload) {
+    let flow = this.getFlow(payload.id);
+    if (flow) {
+      flow.updateRuleNextFlow(payload);
+      this.emitChange();
+      return true;
+    }
+    return false;
+  }
+  updateRuleAttrsFlow(payload) {
+    let flow = this.getFlow(payload.id);
+    if (flow) {
+      flow.updateRuleAttrsFlow(payload);
+      this.emitChange();
+      return true;
+    }
+    return false;
   }
 
   getFlows() {

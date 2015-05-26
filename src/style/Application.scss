@@ -31,3 +31,19 @@ h1 {
   font-weight: 300;
   text-align: center;
 }
+.float-right {
+  float: right;
+}
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+.success {
+  color: #4F8A10;
+}
+.fail {
+  color: #D8000C;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}

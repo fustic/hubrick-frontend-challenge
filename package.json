@@ -1,6 +1,6 @@
 {
   "name": "hubrickFrontendChallenge",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Hubrick Frontend Challenge",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "dev": "NODE_ENV=development DEBUG=hubrickFrontendChallenge node index",
     "prod": "NODE_ENV=production PORT=8080 DEBUG=hubrickFrontendChallenge node index",
     "build": "webpack --stats --progress --config ./webpack/prod.config.js",
-    "postinstall": "npm run build",
+    "postinstall": "npm run build && npm run dev",
     "linter": "eslint src && jscs src",
     "test": "mocha --compilers js:babel/register --recursive --reporter spec",
     "coverage": "babel-node node_modules/.bin/isparta cover --report text node_modules/.bin/_mocha --reporter spec"
@@ -65,9 +65,7 @@
     "strip-loader": "^0.1.0",
     "style-loader": "^0.12.2",
     "superagent": "^1.2.0",
-    "webpack": "^1.9.7"
-  },
-  "devDependencies": {
+    "webpack": "^1.9.7",
     "babel-eslint": "^3.1.5",
     "babel-jest": "*",
     "chai": "^2.3.0",
@@ -79,5 +77,8 @@
     "mocha-jsdom": "^0.3.0",
     "react-hot-loader": "^1.2.7",
     "webpack-dev-server": "^1.8.2"
+  },
+  "devDependencies": {
+
   }
 }

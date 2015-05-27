@@ -3,7 +3,8 @@ import React from 'react';
 // Add promise support for browser not supporting it
 import es6Promise from 'es6-promise';
 es6Promise.polyfill();
-require('babel/polyfill');
+
+//require('babel/polyfill');
 
 window.debug = require('debug');
 

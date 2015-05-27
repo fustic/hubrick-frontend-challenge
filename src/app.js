@@ -3,7 +3,7 @@ import { RouteStore } from 'fluxible-router';
 
 import routes from './routes';
 
-import Application from './application';
+import Application from './Application';
 
 import HtmlHeadStore from './stores/htmlHeadStore';
 import FlowsStore from './stores/flowsStore';

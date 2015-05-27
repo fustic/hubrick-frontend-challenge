@@ -5,8 +5,8 @@ import { flowRuleNextChange, flowRuleAttrsChange } from '../actions/FlowsActionC
 import Select from 'react-select';
 
 if (process.env.BROWSER) {
-  require('../style/rule.scss');
-  require('../style/select.scss');
+  require('../style/Rule.scss');
+  require('../style/Select.scss');
 }
 
 class Rule extends Component {

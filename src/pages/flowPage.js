@@ -7,7 +7,7 @@ import ExecuteFlow from '../components/ExecuteFlow';
 import { Paper, RaisedButton, TextField } from 'material-ui';
 
 if (process.env.BROWSER) {
-  require('../style/flow.scss');
+  require('../style/Flow.scss');
 }
 
 class FlowPage extends Component {

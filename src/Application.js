@@ -8,10 +8,9 @@ import Immutable from 'immutable';
 
 import NotFoundPage from './pages/NotFoundPage';
 import ErrorPage from './pages/ErrorPage';
-import LoadingPage from './pages/LoadingPage';
 
 if (process.env.BROWSER) {
-  require('./style/application.scss');
+  require('./style/Application.scss');
 }
 
 class Application extends Component {
@@ -59,10 +58,6 @@ class Application extends Component {
       // No handler: this is another case where a route is not found (e.g.
       // is not defined in the routes.js config)
       content = <NotFoundPage />;
-    }
-    else if (!isNavigateComplete) {
-      // Show a loading page while waiting the route's action to finish
-      content = <LoadingPage />;
     }
     else {
       // Here you go with the actual page content

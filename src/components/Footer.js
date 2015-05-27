@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'fluxible-router';
 
 if (process.env.BROWSER) {
-  require('../style/footer.scss');
+  require('../style/Footer.scss');
 }
 
 class Footer extends Component {

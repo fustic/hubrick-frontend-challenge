@@ -6,7 +6,7 @@ import FlowAddButton from '../components/FlowAddButton';
 import { addFlow } from '../actions/FlowsActionCreators.js'
 
 if (process.env.BROWSER) {
-  require('../style/flows.scss');
+  require('../style/Flows.scss');
 }
 
 class FlowsPage extends Component {

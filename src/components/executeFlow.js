@@ -4,7 +4,7 @@ import { RaisedButton, TextField } from 'material-ui';
 import { flowRuleNextChange, flowRuleAttrsChange } from '../actions/FlowsActionCreators';
 
 if (process.env.BROWSER) {
-  require('../style/flow.scss');
+  require('../style/Flow.scss');
 }
 
 class ExecuteFlow extends Component {

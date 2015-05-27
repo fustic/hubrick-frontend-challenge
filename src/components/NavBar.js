@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'fluxible-router';
 if (process.env.BROWSER) {
-  require('../style/Header.scss');
+  require('../style/NavBar.scss');
 }
 
 class NavBar extends Component {

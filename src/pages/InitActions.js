@@ -8,9 +8,6 @@ const InitActions = {
     const id = route.getIn(['params', 'id']);
     context.executeAction(getFlow, { id }, done);
   },
-  newFlow(context, route, done) {
-    context.executeAction(addFlow, done);
-  },
   // do not load something, just send an error in the callback
   // to show how the app react with errors
   badPage(context, route, done) {

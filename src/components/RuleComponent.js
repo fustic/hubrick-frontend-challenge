@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import Actions from '../constants/Actions';
 import { Paper, TextField } from 'material-ui';
 import { flowRuleNextChange, flowRuleAttrsChange } from '../actions/FlowsActionCreators';
 import Select from 'react-select';
@@ -51,7 +50,7 @@ class Rule extends Component {
       return;
     }
     try {
-      let fn = eval('(' + value + ')');
+      let fn = eval('(' + value + ')');// eslint-disable-line
       if (fn && typeof fn === 'function') {
         this.context.executeAction(flowRuleAttrsChange, {
           id: this.props.rule.flow.id,
@@ -83,7 +82,7 @@ class Rule extends Component {
     }
     value = Number(value);
     if (value === this.props.rule.id) {
-      return;
+      return false;
     }
     if (this.props.rule.flow.isRuleIDavailable(value)) {
       this.context.executeAction(flowRuleAttrsChange, {

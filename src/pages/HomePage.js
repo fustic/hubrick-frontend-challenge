@@ -13,7 +13,7 @@ class HomePage extends Component {
   }
 
   handleFlowChange(event, selectedIndex, menuItem) {
-    let flow = this.props.flows.find((flow) => flow.id === Number(menuItem.payload));
+    let flow = this.props.flows.find((f) => f.id === Number(menuItem.payload));
     if (flow) {
       this.setState({
         flow: flow
@@ -39,7 +39,7 @@ class HomePage extends Component {
 
 }
 
-HomePage = connectToStores(HomePage, ["FlowsStore"], (stores) => {
+HomePage = connectToStores(HomePage, ['FlowsStore'], (stores) => {
   return {
     flows: stores.FlowsStore.getFlows()
   };

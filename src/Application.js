@@ -4,7 +4,6 @@ import { provideContext, connectToStores } from 'fluxible/addons';
 import { handleHistory } from 'fluxible-router';
 
 import Page from './components/PageComponent';
-import Immutable from 'immutable';
 
 import NotFoundPage from './pages/NotFoundPage';
 import ErrorPage from './pages/ErrorPage';
@@ -31,7 +30,7 @@ class Application extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    const { documentTitle, currentRoute } = this.props;
+    const { documentTitle } = this.props;
 
     if (prevProps.documentTitle !== documentTitle) {
       document.title = documentTitle;

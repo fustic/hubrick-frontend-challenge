@@ -1,6 +1,5 @@
 import { BaseStore } from 'fluxible/addons';
-import Actions from '../constants/Actions';
-import Flow from '../models/FlowModel'
+import Flow from '../models/FlowModel';
 
 /**
  * @class
@@ -110,24 +109,24 @@ class FlowsStore extends BaseStore {
     let ruleBodyChangePayload = {
       type: 'body',
       ruleId: 1,
-      value: function (obj) {return obj.color === 'red' && obj.size === 12;}
+      value: function (obj) {return obj.color === 'red' && obj.size === 12; }
     };
     flow.updateRuleAttrsFlow(ruleBodyChangePayload);
     flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
       ruleId: 2,
-      value: function (obj) {return obj.color === 'blue'}
+      value: function (obj) {return obj.color === 'blue'; }
     }));
     flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
       ruleId: 3,
-      value: function (obj) {return obj.color !== 'blue' && obj.size === 12;}
+      value: function (obj) {return obj.color !== 'blue' && obj.size === 12; }
     }));
     flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
       ruleId: 4,
-      value: function (obj) {return obj.size === 12;}
+      value: function (obj) {return obj.size === 12; }
     }));
     flow.updateRuleAttrsFlow(Object.assign({}, ruleBodyChangePayload, {
       ruleId: 5,
-      value: function (obj) {return obj.size;}
+      value: function (obj) {return obj.size; }
     }));
 
     flow.updateRuleNextFlow({

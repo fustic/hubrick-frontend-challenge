@@ -4,7 +4,7 @@ class ErrorPage extends React.Component {
 
   static propTypes = {
     err: PropTypes.object
-  }
+  };
 
   render() {
     const { err } = this.props;

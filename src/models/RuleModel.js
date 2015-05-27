@@ -1,4 +1,4 @@
-import BaseModel from '../models/BaseModel'
+import BaseModel from '../models/BaseModel';
 
 /**
  * @class

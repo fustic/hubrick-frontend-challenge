@@ -16,16 +16,16 @@ export default {
     handler: FlowsPage
   },
   flow: {
-    path: "/flows/:id",
-    method: "get",
+    path: '/flows/:id',
+    method: 'get',
     handler: FlowPage,
     action: InitActions.flowPage
   },
   // This route doesn't point to any handler.
   // I made it just as example for showing an action responding with an error
   bad: {
-    path: "/bad",
-    method: "get",
+    path: '/bad',
+    method: 'get',
     action: InitActions.badPage
   }
 

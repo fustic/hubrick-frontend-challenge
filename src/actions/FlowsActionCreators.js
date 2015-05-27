@@ -1,4 +1,3 @@
-import Actions from '../constants/Actions';
 import FlowsStore from '../stores/FlowsStore';
 import { navigateAction } from 'fluxible-router';
 

@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import Actions from '../constants/Actions';
 import { addNewRule, flowChangeTitle } from '../actions/FlowsActionCreators';
 import { connectToStores } from 'fluxible/addons';
 import Rule from '../components/RuleComponent';
@@ -67,7 +66,7 @@ class FlowPage extends Component {
 
 }
 
-FlowPage = connectToStores(FlowPage, ["FlowsStore"], (stores, props) => {
+FlowPage = connectToStores(FlowPage, ['FlowsStore'], (stores, props) => {
   return {
     flow: stores.FlowsStore.getFlow(props.id)
   };

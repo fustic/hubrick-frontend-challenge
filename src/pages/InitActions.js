@@ -1,6 +1,6 @@
 // Actions to run when the router matches a route. Used in app/routes.js
 
-import { addFlow, getFlow } from '../actions/FlowsActionCreators.js';
+import { getFlow } from '../actions/FlowsActionCreators.js';
 
 const InitActions = {
 

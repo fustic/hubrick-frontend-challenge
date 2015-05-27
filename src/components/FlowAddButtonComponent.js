@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import Actions from '../constants/Actions';
 import { FloatingActionButton } from 'material-ui';
-import { addFlow } from '../actions/FlowsActionCreators.js'
+import { addFlow } from '../actions/FlowsActionCreators.js';
 
 class FlowAddButton extends Component {
 

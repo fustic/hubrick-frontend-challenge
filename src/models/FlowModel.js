@@ -1,5 +1,5 @@
-import BaseModel from '../models/BaseModel'
-import Rule from '../models/RuleModel'
+import BaseModel from '../models/BaseModel';
+import Rule from '../models/RuleModel';
 /**
  * @class
  * @name Flow
@@ -20,6 +20,7 @@ class Flow extends BaseModel {
     this.rules = [new Rule(1, 'Rule 1', this, true)];
   }
   isRuleIDavailable(id) {
+    id = Number(id);
     return this.rules.filter((rule) => rule.id === id).length === 0;
   }
   addNewRule() {
@@ -31,10 +32,10 @@ class Flow extends BaseModel {
     this.rules.push(new Rule(ruleId, 'Rule ' + ruleId, this));
   }
   updateRuleNextFlow(payload) {
-    let rule = this.rules.filter((rule) => rule.id === payload.ruleId)[0];
+    let rule = this.rules.filter((r) => r.id === payload.ruleId)[0];
     if (rule) {
       if (payload.newValue) {
-        rule[payload.type] = this.rules.filter((rule) => rule.id === payload.newValue)[0] || {};
+        rule[payload.type] = this.rules.filter((r) => r.id === payload.newValue)[0] || {};
         rule[payload.type].isOccupied = true;
       } else {
         rule[payload.type] = null;
@@ -45,7 +46,7 @@ class Flow extends BaseModel {
     }
   }
   updateRuleAttrsFlow(payload) {
-    let rule = this.rules.filter((rule) => rule.id === payload.ruleId)[0];
+    let rule = this.rules.filter((r) => r.id === payload.ruleId)[0];
     if (rule) {
       rule[payload.type] = payload.value;
     }
@@ -68,7 +69,7 @@ class Flow extends BaseModel {
         title: nextRule.title,
         status: nextRule.body(obj) ? 'passed' : 'failed'
       });
-      nextRule = nextRule.body(obj) ? nextRule.trueRule : nextRule.falseRule
+      nextRule = nextRule.body(obj) ? nextRule.trueRule : nextRule.falseRule;
     }
     results.push({
       title: 'End'

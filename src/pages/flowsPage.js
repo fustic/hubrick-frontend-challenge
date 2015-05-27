@@ -1,9 +1,7 @@
-import React, { PropTypes, Component } from 'react';
-import Actions from '../constants/Actions';
+import React, { Component } from 'react';
 import { connectToStores } from 'fluxible/addons';
 import { NavLink } from 'fluxible-router';
 import FlowAddButton from '../components/FlowAddButtonComponent';
-import { addFlow } from '../actions/FlowsActionCreators.js'
 
 if (process.env.BROWSER) {
   require('../style/Flows.scss');
@@ -31,7 +29,7 @@ class FlowsPage extends Component {
 
 }
 
-FlowsPage = connectToStores(FlowsPage, ["FlowsStore"], (stores) => {
+FlowsPage = connectToStores(FlowsPage, ['FlowsStore'], (stores) => {
   return {
     flows: stores.FlowsStore.getFlows()
   };

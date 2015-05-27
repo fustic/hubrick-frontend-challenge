@@ -31,28 +31,9 @@ The [production config](./webpack/prod.config.js) is used to build the productio
 Both configs set a `process.env.BROWSER` global variable, useful to require CSS from the components, e.g:
 
 ```js
-// MyComponent
 if (process.env.BROWSER) {
   require('../style/MyComponent.scss');
 }
-```
-
-Files loaded by webpack are hashed. Javascript and CSS file names are [saved](webpack/plugins/write-stats.js) in a JSON file and passed to the [HtmlDocument](src/server/HtmlDocument.js) component from the [server/render](src/server/render.js) middleware.
-
-### Babeljs
-
-This app is written in Javascript-[Babel](https://babeljs.io/). Babel config is in [.babelrc](.babelrc)
-
-### Linting
-
-I use [eslint](http://eslint.org) with [babel-eslint](https://github.com/babel/babel-eslint) and the [react plugin](https://github.com/yannickcr/eslint-plugin-react) – config in [.eslintrc](.eslintrc).
-
-Code style with [jscs](http://jscs.info) using [a config](.jscsrc) inspired by Airbnb's one.
-
-You can use this command to run both linters from the command line:
-
-```bash
-npm run linter
 ```
 
 ### Testing
@@ -61,12 +42,6 @@ To run the tests, use this command:
 
 ```
 npm test
-```
-
-There's also the test coverage with [isparta](https://github.com/douglasduteil/isparta) (based on [istanbul](https://github.com/gotwarlost/istanbul)):
-
-```bash
-npm run coverage
 ```
 
 ### Debugging

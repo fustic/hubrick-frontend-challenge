@@ -3,7 +3,7 @@ import Actions from '../constants/Actions';
 import { addNewRule, flowChangeTitle } from '../actions/FlowsActionCreators';
 import { connectToStores } from 'fluxible/addons';
 import Rule from '../components/RuleComponent';
-import ExecuteFlow from '../components/ExecuteFlow';
+import ExecuteFlow from '../components/ExecuteFlowComponent';
 import { Paper, RaisedButton, TextField } from 'material-ui';
 
 if (process.env.BROWSER) {

@@ -3,7 +3,7 @@ import React, { PropTypes, Component } from 'react';
 import { provideContext, connectToStores } from 'fluxible/addons';
 import { handleHistory } from 'fluxible-router';
 
-import Page from './components/Page';
+import Page from './components/PageComponent';
 import Immutable from 'immutable';
 
 import NotFoundPage from './pages/NotFoundPage';

@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import Actions from '../constants/Actions';
 import { connectToStores } from 'fluxible/addons';
 import { NavLink } from 'fluxible-router';
-import FlowAddButton from '../components/FlowAddButton';
+import FlowAddButton from '../components/FlowAddButtonComponent';
 import { addFlow } from '../actions/FlowsActionCreators.js'
 
 if (process.env.BROWSER) {

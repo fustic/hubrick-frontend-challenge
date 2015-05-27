@@ -1,7 +1,7 @@
-import InitActions from './pages/initActions';
-import HomePage from './pages/homePage';
-import FlowsPage from './pages/flowsPage';
-import FlowPage from './pages/flowPage';
+import InitActions from './pages/InitActions';
+import HomePage from './pages/HomePage';
+import FlowsPage from './pages/FlowsPage';
+import FlowPage from './pages/FlowPage';
 
 export default {
 

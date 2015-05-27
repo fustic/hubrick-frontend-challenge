@@ -1,6 +1,6 @@
 import { BaseStore } from 'fluxible/addons';
-import Actions from '../constants/actions';
-import Flow from '../models/flowModel'
+import Actions from '../constants/Actions';
+import Flow from '../models/FlowModel'
 
 /**
  * @class

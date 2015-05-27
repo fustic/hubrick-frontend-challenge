@@ -1,5 +1,5 @@
 import { BaseStore } from 'fluxible/addons';
-import Actions from '../constants/actions';
+import Actions from '../constants/Actions';
 
 const SITE_NAME = 'Hubrick Frontend Challenge';
 const BASE_URL = 'https://hubrick-frontend-challenge.herokuapp.com';

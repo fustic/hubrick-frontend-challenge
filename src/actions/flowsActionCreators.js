@@ -1,5 +1,5 @@
-import Actions from '../constants/actions';
-import FlowsStore from '../stores/flowsStore';
+import Actions from '../constants/Actions';
+import FlowsStore from '../stores/FlowsStore';
 import { navigateAction } from 'fluxible-router';
 
 const FlowsActionCreators = {

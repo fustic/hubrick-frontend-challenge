@@ -4,7 +4,7 @@ import React from 'react';
 import es6Promise from 'es6-promise';
 es6Promise.polyfill();
 
-//require('babel/polyfill');
+require('babel/polyfill');
 
 window.debug = require('debug');
 

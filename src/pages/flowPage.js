@@ -1,9 +1,9 @@
 import React, { PropTypes, Component } from 'react';
-import Actions from '../constants/actions';
-import { addNewRule, flowChangeTitle } from '../actions/flowsActionCreators';
+import Actions from '../constants/Actions';
+import { addNewRule, flowChangeTitle } from '../actions/FlowsActionCreators';
 import { connectToStores } from 'fluxible/addons';
-import Rule from '../components/ruleComponent';
-import ExecuteFlow from '../components/executeFlow';
+import Rule from '../components/RuleComponent';
+import ExecuteFlow from '../components/ExecuteFlow';
 import { Paper, RaisedButton, TextField } from 'material-ui';
 
 if (process.env.BROWSER) {

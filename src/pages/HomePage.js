@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connectToStores } from 'fluxible/addons';
 import { Paper, DropDownMenu } from 'material-ui';
-import ExecuteFlow from '../components/executeFlow';
+import ExecuteFlow from '../components/ExecuteFlow';
 
 class HomePage extends Component {
 

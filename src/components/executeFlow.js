@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import Actions from '../constants/actions';
+import Actions from '../constants/Actions';
 import { RaisedButton, TextField } from 'material-ui';
-import { flowRuleNextChange, flowRuleAttrsChange } from '../actions/flowsActionCreators';
+import { flowRuleNextChange, flowRuleAttrsChange } from '../actions/FlowsActionCreators';
 
 if (process.env.BROWSER) {
   require('../style/flow.scss');

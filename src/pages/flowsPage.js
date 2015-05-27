@@ -1,9 +1,9 @@
 import React, { PropTypes, Component } from 'react';
-import Actions from '../constants/actions';
+import Actions from '../constants/Actions';
 import { connectToStores } from 'fluxible/addons';
 import { NavLink } from 'fluxible-router';
-import FlowAddButton from '../components/flowAddButton';
-import { addFlow } from '../actions/flowsActionCreators.js'
+import FlowAddButton from '../components/FlowAddButton';
+import { addFlow } from '../actions/FlowsActionCreators.js'
 
 if (process.env.BROWSER) {
   require('../style/flows.scss');

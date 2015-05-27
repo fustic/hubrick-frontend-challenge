@@ -1,5 +1,5 @@
-import BaseModel from '../models/baseModel'
-import Rule from '../models/ruleModel'
+import BaseModel from '../models/BaseModel'
+import Rule from '../models/RuleModel'
 /**
  * @class
  * @name Flow

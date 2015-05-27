@@ -1,7 +1,6 @@
 // Actions to run when the router matches a route. Used in app/routes.js
 
-import { loadFeaturedPhotos, loadPhoto } from '../actions/photoActionCreators';
-import { addFlow, getFlow } from '../actions/flowsActionCreators.js';
+import { addFlow, getFlow } from '../actions/FlowsActionCreators.js';
 
 const InitActions = {
 

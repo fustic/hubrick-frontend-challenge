@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
-import NavBar from '../components/navBar';
-import Footer from '../components/footer';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 if (process.env.BROWSER) {
   require('../style/page.scss');

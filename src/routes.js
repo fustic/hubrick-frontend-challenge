@@ -1,9 +1,7 @@
-
-import InitActions from './pages/initActions';
-
-import HomePage from './pages/homePage';
-import FlowsPage from './pages/flowsPage';
-import FlowPage from './pages/flowPage';
+import InitActions from 'pages/initActions';
+import HomePage from 'pages/homePage';
+import FlowsPage from 'pages/flowsPage';
+import FlowPage from 'pages/flowPage';
 
 export default {
 
@@ -23,7 +21,6 @@ export default {
     handler: FlowPage,
     action: InitActions.flowPage
   },
-
   // This route doesn't point to any handler.
   // I made it just as example for showing an action responding with an error
   bad: {
